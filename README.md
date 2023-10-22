@@ -5,19 +5,19 @@ Welcome to the Real Time Medical Allergy/Side Effect Verification System develop
 
 ## Features
 
-1. **Credential-Based Access**: Secure access to patient data, ensuring privacy and compliance with data protection regulations.
+1. **Credential-Based Access**: Secure access to patient data.
 
 2. **Fast NodeJS Backend**: Utilizes a lightning-fast NodeJS backend to deliver rapid results and responsiveness.
 
-3. **Simple Yet Responsive Web Layout**: The user-friendly web interface is designed for simplicity and responsiveness, making it easy for medical professionals to use.
+3. **Simple Yet Responsive Web Layout**: The user-friendly web interface is designed for simplicity and responsiveness, making it easy for use across different display sizes
 
 4. **Strong NoSQL Database**: Powered by MongoDB, our system boasts a robust NoSQL database that adapts seamlessly to various data schemas.
 
-5. **Flashy Error Alerts**: Eye-catching error alerts ensure that important notifications are never overlooked.
+5. **Flashy Error Alerts**: Eye-catching error alert that won't get overlooked 
 
 6. **Atomic Data Insertion**: Ensures data consistency and eliminates potential errors by performing atomic insertion of data into the database.
 
-7. **Well-Structured Patient Prescription**: Patient prescription information is organized and easy to access, enhancing the quality of healthcare services.
+7. **Well-Structured Patient Prescription**: Patient prescription information is organized, easy to access.
 
 ## Getting Started
 
