@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doctor Prescription</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 3vw; 
+    color: #333;
+    margin-bottom: 10px; 
+  }
+
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 40vw; 
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 6vw;
+    }
+    form {
+      width: 84vw;
+    }
+    label {
+      font-weight: normal;
+    }
+    input[type="text"] {
+      padding: 3vw;
+    }
+    button[type="submit"] {
+      padding: 3.5vw 7vw;
+    }
+
+    .popup-onload{
+    margin: 0 auto;
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 50%;
+    left: 85%;
+    margin-top: -300px;
+    margin-left: -300px;
+  }
+  .cnt223{
+    min-width: 600px;
+    width: 600px;
+  }
+
+  }
+
+
+
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+z-index: 100;
+display: none;
+}
+.popup-content{
+   padding: 14px 10px;
+   line-height: 1.5;
+}
+.cnt223 a{
+text-decoration: none;
+}
+.popup-onload{
+margin: 0 auto;
+display: none;
+position: fixed;
+z-index: 101;
+top: 50%;
+left: 76%  ;
+margin-top: -300px;
+margin-left: -300px;
+}
+.cnt223{
+min-width: 200px;
+width: 300px;
+min-height: 150px;
+margin: 100px auto;
+background: #f3f3f3;
+position: relative;
+z-index: 103;
+padding: 15px 35px;
+border-radius: 5px;
+box-shadow: 0 2px 5px #000;
+}
+.cnt223 p{
+clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.cnt223 p a{
+color: #d91900;
+font-weight: bold;
+}
+.cnt223 .x{
+float: right;
+height: 35px;
+left: 22px;
+position: relative;
+top: -25px;
+width: 34px;
+}
+.cnt223 .x:hover{
+cursor: pointer;
+}
+</style>
+<body>
+  <h1>Doctor Prescription</h1>
+ 
+    
+<div class='popup-onload'>
+  <div class='cnt223'>
+  
+  <div class="popup-content">
+        <h2>Allergy allert</h2>
+        <p>Please represcribe Medication because patient is allergic to the medication you provided</p>
+  <br/>
+  <br/>
+  <a href='' class='close'>Close</a>
+  </div>
+  </div>
+  </div>
+    
+  <form method="post" action="/api/prescriptions">
+    <label for="patientId">Patient ID:</label>
+    <input type="text"  name="patientId" required><br>
+    <label for="doctorName">Doctor Name:</label>
+    <input type="text"  name="doctorName" required><br>
+    <label for="medication">Medication:</label>
+    <input type="text"  name="medication" required><br>
+    <label for="dosage">Dosage:</label>
+    <input type="text"  name="dosage" required><br>
+    <label for="date">Date:</label>
+    <input type="text" name="date" required><br>
+    <button type="submit">Prescribe Medication</button>
+    <a href="/">Back to Home</a>
+  </form>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+  $(function(){
+var overlay = $('<div id="overlay"></div>');
+overlay.show();
+overlay.appendTo(document.body);
+$('.popup-onload').show();
+$('.close').click(function(){
+$('.popup-onload').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+
+$('.x').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+});
+</script>
+</html>

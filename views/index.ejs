@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Allergy Verification System</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<style>
+  #links {
+   text-align: center;
+   margin-top: 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ 
+ #links button {
+   padding: 10px 20px;
+   background-color: rgba(128, 151, 241, 0.882);
+   border: none;
+   border-radius: 5vw;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   margin: 10px 0;
+ }
+ 
+ #links button a {
+   font-family: sans-serif;
+   font-weight: bold;
+   color: #07070a;
+   text-decoration: none;
+ }
+ 
+ #links button:hover {
+   background-color: #8097f1;
+ }
+ 
+ @media screen and (max-width: 768px) {
+   #links {
+     display: grid;
+   }
+ }
+ 
+ body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   margin: 0;
+   font-family: Arial, sans-serif;
+   background-color: #f0f0f0;
+ }
+ 
+ h1 {
+   font-size: 4vw;
+   color: #333;
+   margin-bottom: 20px;
+ }
+ button{
+  width: 20rem;
+  font-weight: 700;
+ }
+ </style>
+<body>
+  <h1>Allergy Verification System</h1>
+  <div id="links">
+  <a href="/patient-login"><button >Patient Login</button></a><br>
+  <a href="/doctor-prescription"><button>Doctor Prescription</button></a><br>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Prescriptions</title>
+  <link rel="stylesheet" href="/public/styles/style.css">
+</head>
+<style>
+  body{
+    background-color: #f0f0f0;
+  }
+  .head{
+    background-color: #27374D;
+    
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .container{
+    width: 60%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column; 
+    border: 2px solid black;  
+    border-radius: 12px; 
+  }
+  .mainbody{
+    background-color: rgba(245, 245, 245, 0.831);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  h2{
+    background-color:#526D82 ;
+    color: white;
+    font-size: 2rem;
+  }
+  li{
+    text-decoration:none;
+  }
+  .detail{
+    font-size: 1.6rem;
+  }
+  .mainitems{
+    background-color: rgba(245, 245, 245, 0.831);
+    overflow-y: scroll;
+    height: 79vh;
+  }
+  .pageallignment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+
+
+  ::-webkit-scrollbar {
+    width: 20px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #27374D; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #26436c; 
+  }
+  .back{
+    text-decoration: none;
+    background-color: #27374D;
+    position: relative;
+    width: 2.2rem;
+    padding: 8px;
+    border-radius: 8px;
+
+  }
+  .back>a{
+    text-decoration: none;
+    color: #ffffff;
+    
+    font-size: 1.1rem;
+  }
+</style>
+<body>
+  <div class="back"><a href="/">Back </a></div>
+  <div class="pageallignment">
+  <div class="container">
+  <div class="head"><h1>Patient Prescriptions</h1></div>
+  <div class="mainitems">
+  <% var x = 1 %>
+    <div class="mainbody">
+    <% prescriptions.reverse().forEach(function(prescription) { %>
+      <h2>Prescription <%- x %></h2>
+      <% x+=1 %>  
+      <p class="detail">
+        <strong>Patient Name:</strong> <%= pname %><br>
+        <strong>Doctor:</strong> <%= prescription.doctorName %><br>
+        <strong>Medication:</strong> <%= prescription.medication %><br>
+        <strong>Dosage:</strong> <%= prescription.dosage %><br>
+        <strong>Date:</strong> <%= prescription.date %>
+      </p>
+    <% }); %>
+  </div>
+</div>
+</div>
+</div>
+ 
+  
+</body>
+</html>
+    

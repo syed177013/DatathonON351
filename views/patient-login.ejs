@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Login</title>
+  <link rel="stylesheet" href="/public/styles/style.css">
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  h1 {
+    font-size: 4vw;
+    color: #333;
+    margin-bottom: 1.5vw; 
+  }
+
+  form {
+    background-color: #fff;
+    padding: 2.5vw;
+    border: 1px solid #ddd;
+    border-radius: 1.5vw; 
+    width: 40vw; 
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1vw; 
+  }
+
+  input[type="text"] {
+    width: 95%;
+    padding: 1vw; 
+    margin-bottom: 2vw; 
+    border: 1px solid #ccc;
+    border-radius: 1.5vw;
+  }
+
+  button[type="submit"] {
+    background-color: rgba(128, 151, 241, 0.882);
+    color: #07070a;
+    padding: 1.5vw 3vw; 
+    border: none;
+    border-radius: 1.5vw;
+    cursor: pointer;
+  }
+
+  /* Media query for screens with a maximum width of 768px */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 6vw;
+    }
+    form {
+      width: 70vw;
+    }
+    label {
+      font-weight: normal;
+    }
+    input[type="text"] {
+      padding: 2vw;
+    }
+    button[type="submit"] {
+      padding: 2.5vw 5vw;
+    }
+  }
+</style>
+
+<body>
+  <h1>Patient Login</h1>
+  <form method="post" action="/patient-login">
+    <label for="patientId">Patient ID:</label>
+    <input type="text" name="patientId" required><br>
+    <button type="submit">Log In</button>
+  </form>
+  <p>Don't have an account? <a href="/patient-registration">Register here</a></p>
+  <a href="/">Back to Home</a>
+</body>
+</html>

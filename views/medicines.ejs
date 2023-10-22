@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medicines and Allergies</title>
+</head>
+<body>
+  <h1>Medicines and Their Allergies</h1>
+  <ul>
+    <% medicines.forEach((medicine)=>{ %>
+      <li><strong><%= medicine.name %></strong>: <%= medicine.allergies.join(', ') %></li>
+    <% }); %>
+  </ul>
+
+
+  <a href="/">Back to Home</a>
+</body>
+</html>
