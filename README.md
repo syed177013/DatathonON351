@@ -1,7 +1,7 @@
 # Real Time Medical Allergy/Side Effect Verification System for IBM DataThon 2023
 
 
-Welcome to the Real Time Medical Allergy/Side Effect Verification System developed for IBM DataThin 2023. This system provides real-time medical data verification and management, allowing healthcare professionals to access patient data securely and efficiently.
+Welcome to the Real Time Medical Allergy/Side Effect Verification System developed by our team ON351 for IBM DataThon 2023. This system provides real-time medical data verification and management, allowing healthcare professionals to access patient data securely and efficiently.
 
 ## Features
 
