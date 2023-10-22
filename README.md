@@ -1,4 +1,4 @@
-# Real Time Medical Allergy/Side Effect Verification System for IBM DataThin 2023
+# Real Time Medical Allergy/Side Effect Verification System for IBM DataThon 2023
 
 ![Project Logo](https://yourprojectlogo.com)
 
